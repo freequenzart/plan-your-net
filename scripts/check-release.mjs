@@ -109,5 +109,5 @@ console.log(
   'PASS: MIT/package identity, lockfile, release documents, pinned workflow structure, and limited source secret-pattern check.',
 );
 console.log(
-  'Owner setup still required: a private moderation contact, default-branch rules after the initial push, the first Pages deployment/URL, and review of the final public files/history.',
+  'Owner follow-up: review final public files/history and manually verify Pages or release publication when requested.',
 );

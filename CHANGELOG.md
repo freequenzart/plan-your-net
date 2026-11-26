@@ -25,4 +25,4 @@ All notable changes are documented here. Versions follow Semantic Versioning. Th
 - Windows binaries are not code-signed. macOS/Linux desktop packaging and automatic updates are not configured.
 - Storage is local to each origin/profile and is not synchronized between browser and desktop.
 - Only application-exported SVGs with compatible metadata can be reimported as editable topology.
-- A private moderation contact and default-branch rules remain owner setup tasks.
+- The optional GitHub Pages demo and unsigned Windows releases still require manual review before publication.

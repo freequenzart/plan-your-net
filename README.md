@@ -210,7 +210,7 @@ The project is licensed under the [MIT license](LICENSE). Third-party fonts, ico
 
 Project co-author: GitHub Copilot.
 
-Contributions follow [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md), not through ordinary public issues. Private vulnerability reporting is enabled; the moderation contact and default-branch rules still require owner setup. GitHub workflows run checks on branches/PRs and build a draft release for a matching version tag; no release has been published yet.
+Contributions follow [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md), not through ordinary public issues. Private vulnerability reporting and `main` branch protections are enabled; merges require successful Ubuntu and Windows CI checks. GitHub workflows run checks on branches/PRs and build a draft release for a matching version tag; no release has been published yet.
 
 ## Structure
 
