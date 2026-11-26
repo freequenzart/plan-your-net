@@ -1,7 +1,7 @@
 {
   "name": "plan-your-net",
   "version": "1.1.0",
-  "description": "A local-first network topology planner",
+  "description": "Local-first network topology planner for network design, rollout, and purchasing.",
   "main": "dist-electron/main.cjs",
   "private": true,
   "author": "freequenzart",

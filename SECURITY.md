@@ -10,7 +10,7 @@ Please do not publish vulnerabilities, exploit details, private network plans, o
 
 Private vulnerability reporting is enabled. Submit reports through [the repository's private vulnerability reporting page](https://github.com/freequenzart/plan-your-net/security/advisories/new).
 
-A dedicated security email has not been configured. If GitHub private reporting is unavailable, do not include vulnerability details in a public issue; ask only for a private reporting channel and wait for a maintainer response. Remaining contact setup is tracked in `docs/RELEASING.md`.
+A dedicated security email has not been configured. If GitHub private reporting is unavailable, contact the maintainer [@freequenzart](https://github.com/freequenzart) privately to request a secure channel. Do not include vulnerability details in a public issue.
 
 Useful private reports include the app version, platform, reproduction steps using synthetic data, expected impact, and whether the issue affects the web build, desktop main process, imports, or exports.
 

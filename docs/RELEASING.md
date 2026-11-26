@@ -1,17 +1,17 @@
 # Release checklist
 
-## GitHub repository and owner setup
+## GitHub repository setup
 
-The repository is [github.com/freequenzart/plan-your-net](https://github.com/freequenzart/plan-your-net), and the local `origin` remote and package URLs point there. The project name has not been assessed for trademark or name availability.
+The repository is [github.com/freequenzart/plan-your-net](https://github.com/freequenzart/plan-your-net), and the local `origin` remote and package URLs point there. The `main` branch is published. The project name has not been assessed for trademark or name availability.
 
-1. Review the complete staged diff before the first commit. Keep `node_modules/`, build output, `release/`, and `artifacts/` out of Git; `.gitignore` already excludes these generated directories.
-2. Push the initial branch with upstream tracking, then verify the branch and workflow runs on GitHub.
-3. Private vulnerability reporting is enabled. Designate a private moderation contact and update CODE_OF_CONDUCT.md with the real channel before inviting community contributions.
-4. Configure a default-branch ruleset requiring pull requests and CI checks after the initial branch and checks exist. Secret scanning, push protection, Dependency Graph, Dependabot alerts, and Dependabot security updates are enabled. Actions are restricted to `actions/*` and pinned to full commit SHAs; review these settings if workflow dependencies change.
+1. Review the complete staged diff before every commit. Keep `node_modules/`, build output, `release/`, and `artifacts/` out of Git; `.gitignore` already excludes these generated directories.
+2. The active `Protect main` ruleset requires pull requests, resolved conversations, up-to-date branches, and successful `Checks (ubuntu-latest)` / `Checks (windows-latest)` jobs. It blocks force pushes and branch deletion; approvals are not required for this single-maintainer repository.
+3. Private vulnerability reporting is enabled. The Code of Conduct lists maintainer [@freequenzart](https://github.com/freequenzart) as the moderation contact.
+4. Secret scanning, push protection, Dependency Graph, Dependabot alerts, and Dependabot security updates are enabled. Actions are restricted to `actions/*` and pinned to full commit SHAs; review these settings if workflow dependencies change.
 5. Review source, history, examples, screenshots, dependency licenses, and artifacts for private data or secrets. `.gitignore` is preventive, not a history or secret scanner.
 6. Review the MIT attribution, THIRD_PARTY_NOTICES.md, and Electron runtime notices. Confirm you have rights to all included material.
 
-For an optional public web demo, **GitHub Actions** is selected as the source in **Settings → Pages**. Review environment access rules, then manually run **Deploy Web Demo** after the initial push. No Pages deployment runs automatically on a push. Add the Pages URL to the repository About section only after deployment succeeds.
+For an optional public web demo, **GitHub Actions** is selected as the source in **Settings → Pages**. Review environment access rules, then manually run **Deploy Web Demo**. No Pages deployment runs automatically on a push. Add the Pages URL to the repository About section only after deployment succeeds.
 
 ## Local release verification
 
