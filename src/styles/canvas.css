@@ -1,0 +1,256 @@
+.canvas-area {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--canvas);
+}
+.canvas-title {
+  position: absolute;
+  top: 22px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  pointer-events: none;
+  z-index: 1;
+}
+.canvas-title-icon {
+  color: #738a7b;
+  display: flex;
+}
+.canvas-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 9px;
+  color: #9ba69f;
+  font-weight: 400;
+}
+.canvas-subtitle svg {
+  fill: #aeb8b2;
+}
+.canvas-mount,
+network-canvas,
+network-canvas > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+network-canvas > svg {
+  touch-action: none;
+  user-select: none;
+  outline-offset: -3px;
+}
+network-canvas[data-tool='room'] {
+  cursor: crosshair;
+}
+network-canvas[data-tool='pan'] {
+  cursor: grab;
+}
+network-canvas[data-tool='pan']:active {
+  cursor: grabbing;
+}
+network-canvas[data-tool='connect'] .map-device {
+  cursor: crosshair;
+}
+.map-device,
+.map-link,
+.map-room {
+  cursor: pointer;
+}
+.map-device:hover > rect:first-of-type {
+  stroke: #77aa96;
+}
+.map-room text {
+  pointer-events: none;
+}
+.map-room .resize-handle {
+  cursor: nwse-resize;
+}
+.device-name {
+  font: 600 12px var(--font);
+  fill: var(--diagram-text);
+  paint-order: stroke;
+  stroke: var(--canvas);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+.device-ip {
+  font: 9px var(--font);
+  fill: var(--diagram-muted);
+  paint-order: stroke;
+  stroke: var(--canvas);
+  stroke-width: 3px;
+}
+.room-label {
+  font: 600 10px var(--font);
+}
+.link-label {
+  font: 500 9px var(--font);
+}
+.link-label-group {
+  pointer-events: all;
+}
+.link-label-group.is-draggable {
+  cursor: move;
+  user-select: none;
+}
+.map-link:hover .visible-link {
+  stroke-width: 4px;
+}
+.floating-toolbar {
+  position: absolute;
+  top: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 5px;
+  border: 1px solid #e0e7e2;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 4px 14px #203d3008;
+  z-index: 3;
+}
+.editing-tools {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  color: #819087;
+}
+.icon-button:hover:not(:disabled) {
+  color: var(--green);
+  background: #f0f6f2;
+}
+.icon-button.active {
+  color: var(--green);
+  background: #e7f2eb;
+}
+.tool-divider {
+  display: block;
+  height: 20px;
+  width: 1px;
+  flex-shrink: 0;
+  background: var(--border);
+  margin: 0 4px;
+}
+.canvas-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  right: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  pointer-events: none;
+}
+.canvas-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 9px;
+  color: #8a998f;
+}
+.canvas-legend > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.status-color-legend {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.status-color-legend[hidden] {
+  display: none;
+}
+.status-color-legend > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.actual-status-dot,
+.planned-status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+}
+.actual-status-dot {
+  background: #39836b;
+}
+.planned-status-dot {
+  background: #cf8737;
+}
+.legend-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #167d67;
+  border-radius: 2px;
+}
+.fiber-dot {
+  background: #dc8c25;
+}
+.legend-dash {
+  width: 11px;
+  height: 1px;
+  border-top: 1px dashed #885fc1;
+}
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  gap: 1px;
+  border: 1px solid #e1e8e3;
+  border-radius: 6px;
+  background: white;
+  pointer-events: auto;
+  box-shadow: 0 2px 6px #203d3004;
+}
+.zoom-controls .icon-button {
+  width: 29px;
+  height: 29px;
+}
+.zoom-controls .icon-button svg {
+  width: 16px;
+  height: 16px;
+}
+.zoom-value {
+  font-size: 10px;
+  min-width: 46px;
+  height: 29px;
+  color: #697e71;
+}
+.tool-hint {
+  position: absolute;
+  bottom: 76px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #244b3e;
+  box-shadow: 0 3px 15px #203d301a;
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  max-width: calc(100% - 35px);
+  width: max-content;
+  pointer-events: none;
+  z-index: 4;
+}

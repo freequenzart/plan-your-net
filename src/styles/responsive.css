@@ -1,0 +1,348 @@
+@media (min-width: 1600px) {
+  .editor-layout {
+    grid-template-columns: 250px minmax(0, 1fr) 285px;
+  }
+  device-palette {
+    padding: 0 23px;
+  }
+  property-panel {
+    padding: 0 25px;
+  }
+  .device-tile {
+    height: 94px;
+  }
+}
+@media (max-width: 1150px) {
+  .app-header {
+    padding: 0 20px;
+    gap: 18px;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .mode-switch {
+    margin-right: 0;
+  }
+  .document-title input {
+    width: 175px;
+  }
+  .editor-layout {
+    grid-template-columns: 196px minmax(0, 1fr) 228px;
+  }
+  device-palette {
+    padding: 0 13px;
+  }
+  property-panel {
+    padding: 0 16px;
+  }
+  .canvas-legend {
+    display: none;
+  }
+  .canvas-bottom {
+    justify-content: flex-end;
+  }
+  .mode-switch button {
+    padding: 8px 10px;
+  }
+  .color-options {
+    gap: 5px;
+  }
+  .swatch {
+    width: 19px;
+    height: 19px;
+  }
+}
+@media (max-width: 950px) {
+  .inspector-mount {
+    display: none;
+  }
+  .editor-layout,
+  plan-your-net-app[data-mode='view'] .editor-layout {
+    grid-template-columns: 196px minmax(0, 1fr);
+  }
+  plan-your-net-app[data-mode='view'] .editor-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .mobile-inspector {
+    display: inline-flex;
+  }
+  .inspector-open .inspector-mount {
+    display: block;
+    position: absolute;
+    z-index: 8;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 260px;
+    box-shadow: -8px 0 24px #203d3010;
+  }
+  .header-divider {
+    display: none;
+  }
+  .brand {
+    font-size: 23px;
+  }
+  .document-title input {
+    width: 160px;
+  }
+  .mode-switch button {
+    padding: 8px;
+  }
+  .header-actions .button {
+    padding: 9px 11px;
+  }
+  .document-count {
+    display: none;
+  }
+  .header-actions :is(.mark-actual-state, .save-json-button, .export-button) {
+    flex: 0 0 34px;
+    width: 34px;
+    padding: 7px;
+  }
+  .header-actions :is(.mark-actual-state, .save-json-button, .export-button) span {
+    display: none;
+  }
+}
+@media (min-width: 951px) and (max-width: 1150px) {
+  .header-actions :is(.mark-actual-state, .save-json-button, .export-button) {
+    flex: 0 0 34px;
+    width: 34px;
+    padding: 7px;
+  }
+  .header-actions :is(.mark-actual-state, .save-json-button, .export-button) span {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .app-header {
+    height: 112px;
+    padding: 12px 16px;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .brand {
+    font-size: 23px;
+    gap: 7px;
+  }
+  .brand-symbol {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+  }
+  .brand-symbol svg {
+    width: 19px;
+  }
+  .document-title {
+    margin-left: auto;
+    align-items: flex-end;
+    max-width: 55%;
+  }
+  .document-title input {
+    text-align: right;
+    width: 200px;
+    font-size: 12px;
+  }
+  .save-status {
+    font-size: 8px;
+  }
+  .header-actions {
+    width: 100%;
+    gap: 8px;
+  }
+  .mode-switch {
+    margin-right: auto;
+    padding: 3px;
+  }
+  .mode-switch button {
+    font-size: 10px;
+    padding: 6px 9px;
+    gap: 5px;
+  }
+  .mode-switch button svg {
+    width: 13px;
+    height: 13px;
+  }
+  .header-actions .button {
+    min-height: 32px;
+    padding: 7px 9px;
+    font-size: 10px;
+    gap: 5px;
+  }
+  .header-actions .button svg {
+    width: 14px;
+    height: 14px;
+  }
+  .header-actions .mark-actual-state {
+    width: 34px;
+    padding: 7px;
+  }
+  .header-actions .mark-actual-state span {
+    display: none;
+  }
+  .file-menu summary > svg:last-child {
+    display: none;
+  }
+  .workspace-bar {
+    height: 44px;
+    padding: 0 16px;
+  }
+  .breadcrumbs {
+    gap: 7px;
+    font-size: 9px;
+  }
+  .local-badge {
+    display: none;
+  }
+  .workspace-actions {
+    gap: 12px;
+  }
+  .text-button {
+    font-size: 10px;
+    gap: 4px;
+  }
+  .text-button svg {
+    width: 14px;
+  }
+  .mobile-library {
+    display: inline-flex;
+  }
+  .editor-layout,
+  plan-your-net-app[data-mode='view'] .editor-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  device-palette {
+    display: none;
+  }
+  .palette-open device-palette {
+    display: flex;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 215px;
+    padding: 0 17px;
+    box-shadow: 8px 0 24px #203d3010;
+  }
+  .canvas-title {
+    left: 17px;
+    top: 18px;
+    font-size: 10px;
+  }
+  .canvas-subtitle {
+    font-size: 8px;
+  }
+  .floating-toolbar {
+    top: 52px;
+  }
+  .icon-button {
+    width: 33px;
+    height: 33px;
+  }
+  .canvas-bottom {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+  }
+  .status-bar {
+    padding: 0 13px;
+    height: 28px;
+    font-size: 8px;
+  }
+  .status-selection {
+    display: none;
+  }
+  .inspector-open .inspector-mount {
+    width: 252px;
+  }
+  .tool-hint {
+    font-size: 10px;
+    padding: 9px 12px;
+    bottom: 66px;
+  }
+}
+@media (max-width: 380px) {
+  plan-your-net-app[data-mode='view'] .canvas-bottom {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 7px;
+  }
+  plan-your-net-app[data-mode='view'] .status-color-legend {
+    align-self: flex-start;
+  }
+  .assembly-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-width: 0;
+  }
+  .assembly-filters button {
+    min-width: 0;
+    padding: 8px 4px;
+    white-space: normal;
+  }
+  .canvas-title .canvas-subtitle {
+    display: none;
+  }
+  .app-header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: 34px 34px;
+    gap: 12px 10px;
+  }
+  .header-actions {
+    grid-column: 1 / -1;
+    gap: 6px;
+  }
+  .mode-switch button {
+    padding: 6px;
+    gap: 4px;
+    font-size: 9px;
+  }
+  .document-title {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .header-actions .export-button {
+    width: 34px;
+    flex-shrink: 0;
+    padding: 7px;
+  }
+  .header-actions .save-json-button {
+    width: 34px;
+    flex-shrink: 0;
+    padding: 7px;
+  }
+  .export-button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+@media (max-width: 600px) {
+  .breadcrumbs {
+    display: none;
+  }
+  .workspace-actions {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  .workspace-actions .mobile-library {
+    margin-right: auto;
+  }
+  .language-control select {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

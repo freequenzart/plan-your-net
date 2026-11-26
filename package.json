@@ -1,0 +1,73 @@
+{
+  "name": "plan-your-net",
+  "version": "1.1.0",
+  "description": "A local-first network topology planner",
+  "main": "dist-electron/main.cjs",
+  "private": true,
+  "author": "freequenzart",
+  "homepage": "https://github.com/freequenzart/plan-your-net#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freequenzart/plan-your-net.git"
+  },
+  "bugs": {
+    "url": "https://github.com/freequenzart/plan-your-net/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "network",
+    "topology",
+    "network-planning",
+    "web-components",
+    "electron",
+    "offline-first"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run typecheck && node scripts/build.mjs",
+    "build:watch": "node scripts/build.mjs --watch",
+    "dev:electron": "node scripts/dev-electron.mjs",
+    "build:electron": "npm run typecheck && node scripts/build-electron.mjs",
+    "start:electron": "node scripts/start-electron.mjs",
+    "package:electron": "npm run build:electron && electron-builder --config electron-builder.config.cjs --win portable --x64 --publish never",
+    "package:electron:dir": "npm run build:electron && electron-builder --config electron-builder.config.cjs --win --x64 --dir --publish never",
+    "test:electron": "npm run build:electron && node scripts/start-electron.mjs --smoke-test",
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch",
+    "format": "prettier --write src electron tests scripts .github docs \"*.md\" \"*.json\" \"*.cjs\" index.html playwright.config.ts",
+    "format:check": "prettier --check src electron tests scripts .github docs \"*.md\" \"*.json\" \"*.cjs\" index.html playwright.config.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "test:watch": "tsx --test --watch tests/*.test.ts",
+    "test:e2e": "npm run build && playwright test",
+    "test:e2e:ui": "npm run build && playwright test --ui",
+    "screenshots": "npm run build && node scripts/screenshots.mjs",
+    "release:web": "npm run build && node scripts/release.mjs --web",
+    "release:artifacts": "node scripts/release.mjs",
+    "release:check": "node scripts/check-release.mjs"
+  },
+  "overrides": {
+    "minimatch@>=7.0.0 <11.0.1": "^11.0.1"
+  },
+  "dependencies": {
+    "lucide": "0.468.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^22.0.0",
+    "electron": "^45.5.0",
+    "electron-builder": "^26.18.0",
+    "esbuild": "^0.28.1",
+    "fflate": "^0.8.3",
+    "png-to-ico": "^3.0.2",
+    "prettier": "^3.6.2",
+    "sharp": "^0.35.5",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.3",
+    "yaml": "^2.9.1"
+  }
+}

@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light;
+  --green: #167d67;
+  --green-dark: #116653;
+  --ink: #263d36;
+  --muted: #88948e;
+  --border: #e6ebe8;
+  --surface: #fff;
+  --canvas: #f8faf9;
+  --node-surface: #fff;
+  --node-border: #dfe7e5;
+  --grid-dot: #cfd9d6;
+  --diagram-text: #3a5046;
+  --diagram-muted: #8a9a91;
+  --font: 'DM Sans', 'Segoe UI', sans-serif;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --green: #71d5b5;
+  --green-dark: #99e2ca;
+  --ink: #e0e9e3;
+  --muted: #9caca2;
+  --border: #354039;
+  --surface: #232925;
+  --canvas: #191e1b;
+  --node-surface: #29322c;
+  --node-border: #48594d;
+  --grid-dot: #3a463d;
+  --diagram-text: #dce7df;
+  --diagram-muted: #a4b5a9;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  font: 13px var(--font);
+  color: var(--ink);
+  background: var(--canvas);
+}
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+button,
+summary,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+summary {
+  cursor: pointer;
+}
+button {
+  border: 0;
+  background: none;
+}
+button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+button,
+a,
+input,
+select,
+summary {
+  outline-offset: 3px;
+}
+:focus-visible {
+  outline: 2px solid var(--green);
+}
+button svg,
+a svg,
+summary svg {
+  flex-shrink: 0;
+  pointer-events: none;
+}
+button,
+input,
+select {
+  min-width: 0;
+}
+[hidden] {
+  display: none !important;
+}
+plan-your-net-app {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  min-height: 360px;
+}

@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible problem using synthetic or sanitized data.
+body:
+  - type: markdown
+    attributes:
+      value: Do not include real network inventories, credentials, personal data, or security vulnerabilities. Follow SECURITY.md for private reports.
+  - type: input
+    id: version
+    attributes:
+      label: Application version
+      placeholder: 1.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, browser/version or Electron, web/desktop build, screen size if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use an example or synthetic plan. Include expected and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized screenshots or console messages
+      description: Remove private data before attaching anything.

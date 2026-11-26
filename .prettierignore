@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-electron/
+dist-electron-dev/
+release/
+public/licenses/
+package-lock.json
+artifacts/
+playwright-report/
+test-results/
